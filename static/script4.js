@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let body = convertDataToJson(recoveryBlock, failureBlock)
         localStorage.setItem("jsonData4", body)
         console.log("Отправка данных на сервер:", body);
-        postData("http://127.0.0.1:9090/calcAndDraw_pc", body,
+        postData("https://securityanalysis.onrender.com/calcAndDraw_pc", body,
             () => {
                 document.querySelectorAll('#imageGallery .plot').forEach(img => {
                     img.src += '?t=' + new Date().getTime();
